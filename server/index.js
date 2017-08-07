@@ -3,6 +3,7 @@ import Koa from 'koa'
 import logger from 'koa-logger'
 import mongoose from 'mongoose'
 import helmet from 'koa-helmet'
+import cors from 'koa-cors';
 import routing from './routes/'
 import { port, connexionString } from './config'
 
@@ -16,6 +17,7 @@ app
   .use(logger())
   .use(bodyParser())
   .use(helmet())
+  .use(cors())
 
 routing(app)
 

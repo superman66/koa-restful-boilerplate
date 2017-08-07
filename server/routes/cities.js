@@ -29,4 +29,6 @@ router.put('/:id', jwt, CitiesControllers.update)
 // This route is protected, call POST /api/authenticate to get the token
 router.delete('/:id', jwt, CitiesControllers.delete)
 
+router.post('/addYaml', CitiesControllers.addYaml)
+
 export default router

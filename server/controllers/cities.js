@@ -84,7 +84,15 @@ class CitiesControllers {
   }
 
   /* eslint-enable no-param-reassign */
-
+  async addYaml(ctx) {
+    try {
+      console.log(ctx.request);
+      ctx.body = ctx.request.body;
+    } catch (err) {
+      ctx.throw(422)
+    }
+  }
 }
+
 
 export default new CitiesControllers()
